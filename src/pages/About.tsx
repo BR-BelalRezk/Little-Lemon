@@ -1,3 +1,16 @@
+import { MdRestaurantMenu } from "react-icons/md";
+import Hero from "../components/layout/Hero";
 export default function About() {
-  return <div>About</div>;
+  return (
+    <Hero
+      src="/icons&images/Mario and Adrian b.jpg"
+      text={
+        <>
+          Menu
+          <MdRestaurantMenu />
+        </>
+      }
+      path="/menu"
+    />
+  );
 }

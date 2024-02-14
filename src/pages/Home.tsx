@@ -1,5 +1,6 @@
+import Hero from "../components/layout/Hero";
 export default function Home() {
   return (
-    <div>user name</div>
-  )
+    <Hero src="/icons&images/bruchetta.jpg" text={<>Start</>} path="/landing" />
+  );
 }

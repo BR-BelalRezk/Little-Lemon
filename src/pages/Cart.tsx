@@ -1,7 +1,20 @@
+import { BiSolidHome } from "react-icons/bi";
 import SearchOrder from "../components/content/SearchOrder";
-
+import Hero from "../components/layout/Hero";
 export default function Cart() {
-  return <div>Cart
-    <SearchOrder/>
-  </div>;
+  return (
+    <>
+      <Hero
+        src="/icons&images/restaurant chef B.jpg"
+        text={
+          <>
+            Back to home
+            <BiSolidHome />
+          </>
+        }
+        path="/landing"
+      />
+      <SearchOrder />
+    </>
+  );
 }
