@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { motion, Variants } from "framer-motion";
+import { memo } from "react";
 const imgVariants: Variants = {
   open: {
     clipPath: "inset(0% 0% 0% 0% round 1000px)",
@@ -20,7 +21,7 @@ const imgVariants: Variants = {
     },
   },
 };
-export default function Hero({
+const Hero = memo(function Hero({
   text,
   path,
   src,
@@ -74,4 +75,5 @@ export default function Hero({
       </article>
     </section>
   );
-}
+});
+export default Hero;
