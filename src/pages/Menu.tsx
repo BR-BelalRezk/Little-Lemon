@@ -11,7 +11,7 @@ export default function Menu() {
           </>
         }
         path="/reservation"
-        src="/icons&images/restauranfood.svg"
+        src="/icons&images/restauranfood.jpg"
       />
     </>
   );
