@@ -1,6 +1,25 @@
 import { Link } from "react-router-dom";
-import { motion } from "framer-motion";
-
+import { motion, Variants } from "framer-motion";
+const imgVariants: Variants = {
+  open: {
+    clipPath: "inset(0% 0% 0% 0%)",
+    transition: {
+      type: "spring",
+      bounce: 0,
+      duration: 0.7,
+      delayChildren: 0.3,
+      staggerChildren: 0.05,
+    },
+  },
+  close: {
+    clipPath: "inset(10% 50% 90% 50%)",
+    transition: {
+      type: "spring",
+      bounce: 0,
+      duration: 0.3,
+    },
+  },
+};
 export default function Hero({
   text,
   path,
@@ -34,8 +53,9 @@ export default function Hero({
           {text}
         </Link>
         <motion.img
-          initial={{ opacity: 0, x: -50 }}
-          animate={{ opacity: 1, x: 0 }}
+          initial="close"
+          animate="open"
+          variants={imgVariants}
           src={src}
           alt="hero section image"
           className="absolute right-1 top-2 hidden h-80 w-80 rounded-full sm:block lg:right-5"
