@@ -7,7 +7,7 @@ const imgVariants: Variants = {
       type: "spring",
       bounce: 0,
       duration: 1,
-      delay: 0.5,
+      delay: 1,
     },
   },
   close: {
@@ -16,7 +16,7 @@ const imgVariants: Variants = {
       type: "spring",
       bounce: 0,
       duration: 1,
-      delay: 0.5,
+      delay: 1,
     },
   },
 };
