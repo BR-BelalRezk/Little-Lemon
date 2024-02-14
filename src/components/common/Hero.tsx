@@ -69,7 +69,7 @@ export default function Hero({
           loading="lazy"
           src={src}
           alt="hero section image"
-          className="absolute right-1 top-2 hidden h-80 w-80 rounded-full sm:block lg:right-5"
+          className="absolute right-1 top-2 hidden h-80 w-80 rounded-full sm:block lg:right-5 xl:right-10"
         />
       </article>
     </section>
