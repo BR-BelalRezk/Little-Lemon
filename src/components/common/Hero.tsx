@@ -14,7 +14,7 @@ const imgVariants: Variants = {
     transition: {
       type: "spring",
       bounce: 0,
-      duration: 0.5,
+      duration: 1,
     },
   },
 };
@@ -44,12 +44,18 @@ export default function Hero({
           traditional recipes served with a<br />
           modern twist
         </p>
-        <Link
-          to={path}
-          className="flex items-center justify-center gap-3 rounded-full bg-primary_2 px-3 py-1 font-bold text-highlight_2"
+
+        <motion.span
+          initial={{ opacity: 0, y: 25 }}
+          animate={{ opacity: 1, y: 0 }}
         >
-          {text}
-        </Link>
+          <Link
+            to={path}
+            className="flex items-center justify-center gap-3 rounded-full bg-primary_2 px-3 py-1 font-bold text-highlight_2"
+          >
+            {text}
+          </Link>
+        </motion.span>
         <motion.img
           initial="close"
           animate="open"
