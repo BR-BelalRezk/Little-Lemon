@@ -54,6 +54,7 @@ export default function Hero({
           initial="close"
           animate="open"
           variants={imgVariants}
+          loading="lazy"
           src={src}
           alt="hero section image"
           className="absolute right-1 top-2 hidden h-80 w-80 rounded-full sm:block lg:right-5"
