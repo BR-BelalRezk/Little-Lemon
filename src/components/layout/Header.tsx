@@ -88,7 +88,7 @@ export default function Header() {
               <motion.li key={item.name} variants={itemVariants}>
                 <Link to={item.path}>
                   <span className="text-2xl sm:hidden">{item.icon}</span>
-                  <span className="hidden sm:block sm:font-semibold sm:uppercase">
+                  <span className="hidden sm:block sm:font-semibold sm:uppercase lg:font-bold">
                     {item.name}
                   </span>
                 </Link>
