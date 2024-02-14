@@ -2,12 +2,12 @@ import { BsFillPersonFill } from "react-icons/bs";
 import { MdRestaurantMenu } from "react-icons/md";
 import { BiSolidHome } from "react-icons/bi";
 import { FaTableCellsLarge, FaBasketShopping } from "react-icons/fa6";
-import g from "/icons&images/bruchetta.jpg";
-import h from "/icons&images/Mario and Adrian b.jpg";
-import r from "/icons&images/restaurant chef B.jpg";
-import d from "/icons&images/restaurant.jpg";
+import g from "/icons&images/bruchetta.svg";
+import h from "/icons&images/Mario and Adrian b.svg";
+import r from "/icons&images/restaurant chef B.svg";
+import d from "/icons&images/restaurant.svg";
 import e from "/icons&images/lemon dessert.jpg";
-import f from "/icons&images/Mario and Adrian A.jpg";
+import f from "/icons&images/Mario and Adrian A.svg";
 export const navbar = [
   {
     name: "home",
