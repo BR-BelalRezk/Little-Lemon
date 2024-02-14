@@ -1,5 +1,5 @@
 import { FaBasketShopping } from "react-icons/fa6";
-import Hero from "../components/layout/Hero";
+import Hero from "../components/common/Hero";
 export default function Reservation() {
   return (
     <>

@@ -1,6 +1,6 @@
 import { BiSolidHome } from "react-icons/bi";
 import SearchOrder from "../components/content/SearchOrder";
-import Hero from "../components/layout/Hero";
+import Hero from "../components/common/Hero";
 export default function Cart() {
   return (
     <>

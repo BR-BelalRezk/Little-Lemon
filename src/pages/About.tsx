@@ -1,5 +1,5 @@
 import { MdRestaurantMenu } from "react-icons/md";
-import Hero from "../components/layout/Hero";
+import Hero from "../components/common/Hero";
 export default function About() {
   return (
     <Hero

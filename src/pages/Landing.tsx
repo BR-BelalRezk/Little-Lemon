@@ -1,5 +1,5 @@
 import { BsFillPersonFill } from "react-icons/bs";
-import Hero from "../components/layout/Hero";
+import Hero from "../components/common/Hero";
 export default function Landing() {
   return (
     <>
