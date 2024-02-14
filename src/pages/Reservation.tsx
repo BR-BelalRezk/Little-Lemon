@@ -11,7 +11,7 @@ export default function Reservation() {
             <FaBasketShopping />
           </>
         }
-        src="/icons&images/restaurant.jpg"
+        src="/icons&images/restaurant.svg"
       />
     </>
   );
