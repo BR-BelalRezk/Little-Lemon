@@ -7,6 +7,7 @@ import About from "../pages/About";
 import Menu from "../pages/Menu";
 import Cart from "../pages/Cart";
 import Reservation from "../pages/Reservation";
+import Order from "../pages/Order";
 export default function App() {
   const router = createBrowserRouter([
     {
@@ -35,6 +36,10 @@ export default function App() {
         {
           path: "/reservation",
           element: <Reservation />,
+        },
+        {
+          path: "/order/:id",
+          element: <Order />,
         },
       ],
     },

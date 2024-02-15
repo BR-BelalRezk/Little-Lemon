@@ -1,5 +1,6 @@
 import { BsFillPersonFill } from "react-icons/bs";
 import Hero from "../components/common/Hero";
+import Specials from "../components/content/Specials";
 export default function Landing() {
   return (
     <>
@@ -13,6 +14,7 @@ export default function Landing() {
           </>
         }
       />
+      <Specials />
     </>
   );
 }

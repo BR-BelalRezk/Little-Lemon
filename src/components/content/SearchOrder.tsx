@@ -5,7 +5,7 @@ export default function SearchOrder() {
     const navigate = useNavigate()
     const handleSubmit = (e:FormEvent) => {
         e.preventDefault()
-        navigate(`/cart/${query}`)
+        navigate(`/order/${query}`)
         setQuery("")
     }
   return (

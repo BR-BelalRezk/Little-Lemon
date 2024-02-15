@@ -76,19 +76,20 @@ export default function Header() {
                   damping: 20,
                   duration: 1.5,
                 }}
+                viewport={{ once: true }}
                 className={` h-1 w-10 rounded-full bg-primary_1`}
               />
             ))}
           </button>
           <motion.ul
             variants={parentVariants}
-            className="absolute top-16 z-50 flex flex-col items-center justify-center gap-5 rounded-full bg-highlight_1 px-1 py-5 text-highlight_2 sm:relative sm:top-auto sm:flex-row sm:gap-10 sm:bg-primary_1 sm:px-10 sm:py-1.5  sm:text-primary_2 lg:rounded-none lg:bg-transparent lg:text-highlight_2"
+            className="absolute top-16 z-50 flex flex-col items-center justify-center gap-5 rounded-full bg-highlight_1 px-1 py-5 text-highlight_2 sm:relative sm:top-auto sm:flex-row sm:gap-10 sm:bg-primary_1 sm:px-10 sm:py-1.5  sm:text-primary_2"
           >
             {navbar.map((item) => (
               <motion.li key={item.name} variants={itemVariants}>
                 <Link to={item.path}>
                   <span className="text-2xl sm:hidden">{item.icon}</span>
-                  <span className="hidden sm:block sm:font-semibold sm:uppercase lg:font-bold">
+                  <span className="hidden sm:block sm:text-xs sm:font-semibold sm:uppercase lg:text-sm">
                     {item.name}
                   </span>
                 </Link>

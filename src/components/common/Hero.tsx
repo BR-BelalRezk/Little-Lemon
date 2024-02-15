@@ -1,6 +1,6 @@
-import { Link } from "react-router-dom";
 import { motion, Variants } from "framer-motion";
 import { memo } from "react";
+import YellowLink from "../shared/YellowLink";
 const imgVariants: Variants = {
   open: {
     clipPath: "inset(0% 0% 0% 0% round 1000px)",
@@ -47,7 +47,6 @@ const Hero = memo(function Hero({
           traditional recipes served with a<br />
           modern twist
         </p>
-
         <motion.span
           initial={{ opacity: 0, y: 25 }}
           animate={{
@@ -56,21 +55,16 @@ const Hero = memo(function Hero({
             transition: { duration: 1, delay: 0.5, type: "spring" },
           }}
         >
-          <Link
-            to={path}
-            className="flex items-center justify-center gap-3 rounded-full bg-primary_2 px-3 py-1 font-bold text-highlight_2"
-          >
-            {text}
-          </Link>
+          <YellowLink to={path}>{text}</YellowLink>
         </motion.span>
         <motion.img
           initial="close"
           animate="open"
           variants={imgVariants}
-          loading="lazy"
+          loading="eager"
           src={src}
           alt="hero section image"
-          className="absolute right-1 top-2 hidden h-80 w-80 rounded-full sm:block lg:right-5 xl:right-10"
+          className="absolute right-1 top-2 hidden h-80 w-80 rounded-full sm:block lg:right-10 xl:right-14"
         />
       </article>
     </section>
