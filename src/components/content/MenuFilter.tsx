@@ -14,7 +14,7 @@ export default function MenuFilter({
             <button
               key={item.category}
               onClick={() => setSearchParams(item.path)}
-              className="flex items-center justify-center gap-3       rounded-full bg-highlight_2  py-0.5  font-bold text-secondary_2 transition-all duration-500 hover:bg-secondary_1 hover:text-secondary_2
+              className="flex items-center justify-center gap-3 rounded-full bg-highlight_2  py-0.5  font-bold text-secondary_2 transition-all duration-500 hover:bg-secondary_1 hover:text-secondary_2
               "
             >
               {item.icon}
