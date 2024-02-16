@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { navbar } from "../../constants/constants";
 import { useEffect, useState } from "react";
 import { motion, Variants } from "framer-motion";
@@ -32,6 +32,7 @@ const parentVariants: Variants = {
 };
 export default function Header() {
   const [toggle, setToggle] = useState(false);
+  const pathname = useLocation().pathname;
   useEffect(() => {
     if (window.screen.width >= 640) setToggle(true);
   }, []);
@@ -86,12 +87,27 @@ export default function Header() {
             className="absolute top-16 z-50 flex flex-col items-center justify-center gap-5 rounded-full bg-highlight_1 px-1 py-5 text-highlight_2 sm:relative sm:top-auto sm:flex-row sm:gap-10 sm:bg-primary_1 sm:px-10 sm:py-1.5  sm:text-primary_2"
           >
             {navbar.map((item) => (
-              <motion.li key={item.name} variants={itemVariants}>
+              <motion.li
+                key={item.name}
+                variants={itemVariants}
+                className={`relative p-1 sm:p-0 sm:pb-1 ${item.path === pathname && "text-secondary_2"}`}
+              >
                 <Link to={item.path}>
                   <span className="text-2xl sm:hidden">{item.icon}</span>
                   <span className="hidden sm:block sm:text-xs sm:font-semibold sm:uppercase lg:text-sm">
                     {item.name}
                   </span>
+                  {item.path === pathname && (
+                    <motion.span
+                      className="absolute inset-0 -z-10 rounded-full bg-secondary_1 sm:rounded-none sm:border-b-2 sm:border-secondary_2 sm:bg-transparent"
+                      layoutId="navbar"
+                      transition={{
+                        type: "spring",
+                        stiffness: 200,
+                        damping: 20,
+                      }}
+                    />
+                  )}
                 </Link>
               </motion.li>
             ))}

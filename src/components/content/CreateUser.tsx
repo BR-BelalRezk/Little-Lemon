@@ -2,6 +2,7 @@ import { FormEvent, useState } from "react";
 import { useAppDispatch } from "../../hooks/redux-hooks";
 import { updateName } from "../../Redux/slices/userSlice";
 import { useNavigate } from "react-router-dom";
+import YellowButton from "../shared/YellowButton";
 export default function CreateUser() {
   const [username, setUsername] = useState("");
   const dispatch = useAppDispatch();
@@ -36,9 +37,7 @@ export default function CreateUser() {
             onChange={(e) => setUsername(e.target.value)}
             className="w-9/12 rounded-full bg-highlight_1 p-1.5 pl-5 transition-all duration-500 focus:w-10/12 focus:outline-none focus:ring focus:ring-primary_2 focus:ring-offset-1 sm:focus:w-full "
           />
-          <button className="flex items-center justify-center gap-3 rounded-full bg-primary_2 px-5 py-0.5 font-bold text-highlight_2 transition-all duration-500 hover:bg-secondary_1 hover:text-secondary_2">
-            Start
-          </button>
+          <YellowButton className="px-5">Start</YellowButton>
         </form>
       </article>
     </section>

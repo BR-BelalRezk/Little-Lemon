@@ -18,16 +18,15 @@ export default function Specials() {
         <div className="mb-10 grid grid-cols-1 gap-5 lg:grid-cols-3 xl:gap-10">
           {specials.map((item, index) => (
             <motion.div
-              initial={{ opacity: 0 }}
+              initial={{ opacity: 0, y: 50 }}
               whileInView={{
                 opacity: 1,
-                transition: {
-                  delay: index * 0.1 + 0.5,
-                },
+                y: 0,
               }}
+              transition={{ delay: index * 0.1 + 2 }}
               viewport={{ once: true }}
               key={item.name}
-              className="flex flex-col items-center justify-center duration-500 sm:flex-row lg:flex-col"
+              className="flex flex-col items-center justify-center sm:flex-row lg:flex-col"
             >
               <img
                 src={item.img}
