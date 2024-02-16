@@ -22,7 +22,7 @@ export default function CartItem({
         className="flex w-full flex-col  items-center justify-center gap-3 sm:flex-row sm:justify-between sm:gap-0"
       >
         <div className="flex w-full items-center justify-between sm:w-auto sm:justify-center sm:gap-5">
-          <span className="text-xs font-semibold text-secondary_2 sm:text-base">
+          <span className="text-xs font-semibold text-primary_1 sm:text-base">
             {cart.quantity}*
           </span>
           <p className="text-sm font-bold text-secondary_1 sm:text-lg">
@@ -30,14 +30,14 @@ export default function CartItem({
           </p>
         </div>
         <div className="flex w-full items-center justify-between sm:w-auto sm:justify-center sm:gap-5">
-          <span className="text-xs font-semibold text-secondary_2 sm:text-base">
+          <span className="text-xs font-semibold text-primary_1 sm:text-base">
             ${cart.price}
           </span>
           <UpdateItem id={cart.id} currentQuantity={currentQuantity} />
-          <DeleteItem id={cart.id} />
+          <DeleteItem id={cart.id} className="bg-primary_1 text-primary_2" />
         </div>
       </div>
-      <hr className="w-full border border-highlight_1" />
+      <hr className="w-full border border-highlight_2" />
     </li>
   );
 }

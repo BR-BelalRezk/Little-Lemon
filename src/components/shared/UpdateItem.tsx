@@ -21,7 +21,7 @@ export default function UpdateItem({
       >
         -
       </YellowButton>
-      <p className=" font-semibold text-highlight_1">{currentQuantity}</p>
+      <p className=" font-semibold text-primary_1">{currentQuantity}</p>
       <YellowButton
         onClick={() => dispatch(increaseItemQuantity(id))}
         className="px-2"

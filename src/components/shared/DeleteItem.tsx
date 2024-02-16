@@ -1,12 +1,20 @@
 import { deleteItem } from "../../Redux/slices/cartSlice";
 import { useAppDispatch } from "../../hooks/redux-hooks";
-import YellowButton from "./YellowButton";
-
-export default function DeleteItem({ id }: { id: number }) {
+export default function DeleteItem({
+  id,
+  className,
+}: {
+  id: number;
+  className: string;
+}) {
   const dispatch = useAppDispatch();
   return (
-    <YellowButton onClick={() => dispatch(deleteItem(id))} className="px-5">
+    <button
+      onClick={() => dispatch(deleteItem(id))}
+      className={`${className}  rounded-full px-5   py-0.5  font-bold transition-all duration-500 hover:bg-secondary_1 hover:text-secondary_2`}
+    >
+      {" "}
       Delete
-    </YellowButton>
+    </button>
   );
 }

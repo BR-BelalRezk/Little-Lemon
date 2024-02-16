@@ -76,7 +76,10 @@ export default function MenuItem({
           <div className="flex flex-col items-center justify-center gap-3">
             <div className="flex items-center justify-center gap-3">
               <UpdateItem id={cart.id} currentQuantity={currentQuantity} />
-              <DeleteItem id={cart.id} />
+              <DeleteItem
+                id={cart.id}
+                className="bg-primary_2 text-highlight_2"
+              />
             </div>
             <div>
               <YellowLink to="/cart">
