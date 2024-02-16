@@ -75,7 +75,11 @@ export default function MenuItem({
         {isInCart && (
           <div className="flex flex-col items-center justify-center gap-3">
             <div className="flex items-center justify-center gap-3">
-              <UpdateItem id={cart.id} currentQuantity={currentQuantity} />
+              <UpdateItem
+                id={cart.id}
+                currentQuantity={currentQuantity}
+                className="text-secondary_2"
+              />
               <DeleteItem
                 id={cart.id}
                 className="bg-primary_2 text-highlight_2"

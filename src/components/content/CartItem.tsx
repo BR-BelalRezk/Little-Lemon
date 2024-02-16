@@ -33,7 +33,11 @@ export default function CartItem({
           <span className="text-xs font-semibold text-primary_1 sm:text-base">
             ${cart.price}
           </span>
-          <UpdateItem id={cart.id} currentQuantity={currentQuantity} />
+          <UpdateItem
+            id={cart.id}
+            currentQuantity={currentQuantity}
+            className="text-primary_1"
+          />
           <DeleteItem id={cart.id} className="bg-primary_1 text-primary_2" />
         </div>
       </div>

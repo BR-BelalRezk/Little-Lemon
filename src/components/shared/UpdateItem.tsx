@@ -8,9 +8,11 @@ import YellowButton from "./YellowButton";
 export default function UpdateItem({
   id,
   currentQuantity,
+  className
 }: {
   id: number;
   currentQuantity: number;
+  className:string
 }) {
   const dispatch = useAppDispatch();
   return (
@@ -21,7 +23,7 @@ export default function UpdateItem({
       >
         -
       </YellowButton>
-      <p className=" font-semibold text-primary_1">{currentQuantity}</p>
+      <p className={`font-semibold ${className}`}>{currentQuantity}</p>
       <YellowButton
         onClick={() => dispatch(increaseItemQuantity(id))}
         className="px-2"
