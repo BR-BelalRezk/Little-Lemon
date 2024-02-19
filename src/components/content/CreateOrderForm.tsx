@@ -138,8 +138,10 @@ export default function CreateOrderForm() {
           <div className="flex flex-col items-center justify-center gap-5">
             <p className="flex items-center justify-center gap-3 font-bold text-highlight_2 sm:text-xl">
               Total order price with delivery{" "}
-              <span className=" text-primary_2">($10)</span> :{" "}
-              <span className=" text-secondary_1">${totalCartPrice + 10}</span>
+              <span className=" text-primary_2">($10)</span> :
+              <span className=" text-secondary_1">
+                ${Math.round(totalCartPrice + 10)}
+              </span>
             </p>
             <YellowButton
               onClick={() => setIsSubmitted(false)}
