@@ -8,7 +8,7 @@ export default function CartItem({
     id: number;
     name: string;
     quantity: number;
-    price: number;
+    totalPrice: number;
   };
 }) {
   const currentQuantity = useAppSelector(
@@ -31,7 +31,7 @@ export default function CartItem({
         </div>
         <div className="flex w-full items-center justify-between sm:w-auto sm:justify-center sm:gap-5">
           <span className="text-xs font-semibold text-primary_1 sm:text-base">
-            ${cart.price}
+            ${cart.totalPrice}
           </span>
           <UpdateItem
             id={cart.id}

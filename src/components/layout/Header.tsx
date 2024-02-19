@@ -40,7 +40,7 @@ export default function Header() {
     <header className="flex items-center justify-center bg-highlight_1 py-5 lg:py-10">
       <nav className="contain flex items-center justify-between sm:flex-col sm:justify-center sm:gap-5 lg:flex-row lg:justify-between lg:gap-0">
         <figure>
-          <Link to={"/"}>
+          <Link to={"/landing"}>
             <img src="/icons&images\Logo.svg" alt="little lemon logo" />
           </Link>
         </figure>
@@ -90,7 +90,7 @@ export default function Header() {
               <motion.li
                 key={item.name}
                 variants={itemVariants}
-                className={`relative p-1 sm:p-0 sm:pb-1 ${item.path === pathname && "text-secondary_2"}`}
+                className={`relative p-1 sm:p-0  ${item.path === pathname && "text-secondary_2 sm:pb-1"}`}
               >
                 <Link to={item.path}>
                   <span className="text-2xl sm:hidden">{item.icon}</span>

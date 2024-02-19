@@ -5,7 +5,7 @@ interface CartItem {
   name: string;
   quantity: number;
   price: number;
-  totalPrice?: number;
+  totalPrice: number;
 }
 
 interface CartState {

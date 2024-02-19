@@ -7,7 +7,7 @@ import About from "../pages/About";
 import Menu from "../pages/Menu";
 import Cart from "../pages/Cart";
 import Reservation from "../pages/Reservation";
-import Order from "../pages/Order";
+import CreateOrder from "../pages/CreateOrder";
 export default function App() {
   const router = createBrowserRouter([
     {
@@ -38,8 +38,8 @@ export default function App() {
           element: <Reservation />,
         },
         {
-          path: "/order/:id",
-          element: <Order />,
+          path: "/order",
+          element: <CreateOrder />,
         },
       ],
     },

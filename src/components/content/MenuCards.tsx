@@ -15,7 +15,7 @@ export default function MenuCards() {
         <div className="mb-5 flex flex-col items-center justify-center gap-5 lg:grid lg:grid-cols-3 lg:gap-10">
           {FilteredItems.map((item) =>
             item.items.map((item, index) => (
-              <MenuItem cart={item} index={index} />
+              <MenuItem cart={item} index={index} key={index}/>
             )),
           )}
         </div>
