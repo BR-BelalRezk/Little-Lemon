@@ -28,17 +28,17 @@ export function BackButtons({ tab, setTab }: Props) {
 
 export function NextButtons({ tab, setTab }: Props) {
   return (
-    <>
+    <div>
       {tab === 1 ? (
-        <YellowButton className="px-5" onClick={() => setTab(2)}>
+        <YellowButton className=" px-5" onClick={() => setTab(2)}>
           Next
         </YellowButton>
       ) : tab === 2 ? (
-        <YellowButton className="px-5" onClick={() => setTab(3)}>
+        <YellowButton className=" px-5" onClick={() => setTab(3)}>
           Next
         </YellowButton>
       ) : tab === 3 ? (
-        <YellowButton className="px-5" onClick={() => setTab(4)}>
+        <YellowButton className=" px-5" onClick={() => setTab(4)}>
           Next
         </YellowButton>
       ) : (
@@ -50,6 +50,6 @@ export function NextButtons({ tab, setTab }: Props) {
           Reserve Table
         </button>
       )}
-    </>
+    </div>
   );
 }

@@ -1,7 +1,7 @@
 import { BsFillPersonFill } from "react-icons/bs";
 import { MdRestaurantMenu } from "react-icons/md";
 import { BiSolidHome } from "react-icons/bi";
-import { FaTableCellsLarge, FaBasketShopping } from "react-icons/fa6";
+import { FaBasketShopping } from "react-icons/fa6";
 import g from "/icons&images/bruchetta.jpg";
 import h from "/icons&images/Mario and Adrian b.jpg";
 import r from "/icons&images/restaurant chef B.jpg";
@@ -23,11 +23,6 @@ export const navbar = [
     name: "menu",
     icon: <MdRestaurantMenu />,
     path: "/menu",
-  },
-  {
-    name: "reservation",
-    icon: <FaTableCellsLarge />,
-    path: "/reservation",
   },
   {
     name: "cart",

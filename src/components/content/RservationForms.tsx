@@ -15,7 +15,7 @@ export function FormOne({ handleForm, fname, lname, email, pass }: Props1) {
   const [isFinished, setIsFinished] = useState(false);
   return (
     <>
-      <article>
+      <article className=" flex flex-col items-center justify-center gap-10 rounded-lg bg-primary_1 p-5">
         {isFinished ? (
           <p>{fname}</p>
         ) : (
@@ -26,6 +26,7 @@ export function FormOne({ handleForm, fname, lname, email, pass }: Props1) {
             placeholder="First Name"
             onChange={handleForm}
             value={fname}
+            className=" rounded-full bg-highlight_1 p-1 pl-3"
           />
         )}
         {isFinished ? (
@@ -36,6 +37,7 @@ export function FormOne({ handleForm, fname, lname, email, pass }: Props1) {
             name="lname"
             id="lname"
             placeholder="Last Name"
+            className=" rounded-full bg-highlight_1 p-1 pl-3"
             onChange={handleForm}
             value={lname}
           />
@@ -50,6 +52,7 @@ export function FormOne({ handleForm, fname, lname, email, pass }: Props1) {
             placeholder="Email"
             onChange={handleForm}
             value={email}
+            className=" rounded-full bg-highlight_1 p-1 pl-3"
           />
         )}
         {isFinished ? (
@@ -62,6 +65,7 @@ export function FormOne({ handleForm, fname, lname, email, pass }: Props1) {
             placeholder="Password"
             onChange={handleForm}
             value={pass}
+            className=" rounded-full bg-highlight_1 p-1 pl-3"
           />
         )}
       </article>

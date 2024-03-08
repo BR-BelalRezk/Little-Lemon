@@ -20,7 +20,7 @@ export default function Cart() {
       />
       {!cart.length ? (
         <>
-          <p className="flex h-[50vh] items-center justify-center text-xs font-bold text-highlight_2">
+          <p className="flex h-[50vh] items-center justify-center text-center text-3xl font-bold tracking-widest  text-highlight_2 md:text-5xl">
             Your cart is still empty. Start adding some food
           </p>
         </>
